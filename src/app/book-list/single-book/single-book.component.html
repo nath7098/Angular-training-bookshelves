@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <button class="btn btn-primary my-3" (click)="onBack()">
+      <fa-icon [icon]="faBackward"></fa-icon>
+    </button>
+    <h1>{{ book.title }}</h1>
+    <h3>
+      <i>{{ book.author }}</i>
+    </h3>
+    <img
+      *ngIf="book.photo && book.photo !== ''"
+      style="max-width: 400px"
+      [src]="book.photo"
+      [alt]="book.title"
+    />
+  </div>
+</div>
